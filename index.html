@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drag & Drop: Data Approaches</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="category" ondrop="drop(event)" ondragover="allowDrop(event)" data-category="Descriptive">
+    <div class="title">Descriptive Approach</div>
+    <div class="drop-zone"></div>
+  </div>
+  <div class="category" ondrop="drop(event)" ondragover="allowDrop(event)" data-category="Diagnostic">
+    <div class="title">Diagnostic Approach</div>
+    <div class="drop-zone"></div>
+  </div>
+  <div class="category" ondrop="drop(event)" ondragover="allowDrop(event)" data-category="Predictive">
+    <div class="title">Predictive Approach</div>
+    <div class="drop-zone"></div>
+  </div>
+  <div class="category" ondrop="drop(event)" ondragover="allowDrop(event)" data-category="Prescriptive">
+    <div class="title">Prescriptive Approach</div>
+    <div class="drop-zone"></div>
+  </div>
+</div>
+
+<div class="footer">
+  <div id="questionLabel" draggable="true" ondragstart="drag(event)"></div>
+  <br>
+  <button id="submitBtn" disabled onclick="calculateScore()">Check Score</button>
+  <span id="scoreDisplay" style="margin-left: 20px; font-weight: bold;"></span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
